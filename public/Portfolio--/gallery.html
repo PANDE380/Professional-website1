@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Kato Joseph Bwanika</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon.ico">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+    }
+    .logo a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+    }
+    .navbar {
+      position: relative;
+    }
+    .nav-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    .nav-menu li {
+      margin: 0 15px;
+    }
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+    }
+    .toggle-menu {
+      display: none;
+      cursor: pointer;
+    }
+    .toggle-menu:checked + .nav-menu {
+      display: block;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      z-index: 1;
+    }
+    .nav-menu {
+      display: none;
+    }
+    .close-menu {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .toggle-menu:checked + .nav-menu + .close-menu {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+      }
+      .toggle-menu {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">KJB</a>
+    </div>
+    <input type="checkbox" class="toggle-menu" id="toggle-menu">
+    <nav class="navbar">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <label for="toggle-menu" class="close-menu">✕</label>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Gallery</h1>
+    <p>Welcome to my gallery! Here you can find a collection of my work.</p>
+    <!-- Add gallery images or content here -->
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Kato Joseph Bwanika. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

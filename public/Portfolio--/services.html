@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Kato Joseph Bwanika</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon.ico">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+    }
+    .navbar {
+      position: relative;
+    }
+    .nav-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    .nav-menu li {
+      margin: 0 15px;
+    }
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+    input[type="checkbox"]:checked ~ .nav-menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background: #333;
+      width: 100%;
+      z-index: 1;
+    }
+    .nav-menu li {
+      margin: 10px 0;
+      text-align: center;
+    }
+    .close-menu {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+    input[type="checkbox"]:checked ~ .close-menu {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">KJB</a>
+    </div>
+    <div class="navbar">
+      <label for="menu-toggle" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </label>
+      <input type="checkbox" id="menu-toggle">
+      <nav class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <span class="close-menu" onclick="document.getElementById('menu-toggle').checked = false;">✕</span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="services">
+      <h1>Our Services</h1>
+      <p>We offer a range of services to help you achieve your goals:</p>
+      <ul>
+        <li>Web Development</li>
+        <li>Mobile Application Development</li>
+        <li>UI/UX Design</li>
+        <li>Database Management</li>
+        <li>Consultation Services</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Kato Joseph Bwanika. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

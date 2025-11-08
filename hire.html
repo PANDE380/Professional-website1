@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Me - Kato Joseph Bwanika</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hire.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">KJB</a>
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-icon">&#9776;</label>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cta">
+      <a href="hire.html" class="hire-btn active">Hire Me</a>
+      <button class="toggle-theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hire-hero">
+      <h1>Hire <span>Me</span></h1>
+      <p>Ready to work together? Choose a service package that fits your needs and let's bring your vision to life.</p>
+    </section>
+
+    <section class="pricing-packages">
+      <div class="package basic">
+        <div class="package-icon">
+          <i class="fas fa-cube"></i>
+        </div>
+        <h2>Basic Package</h2>
+        <div class="price">UGX 100k</div>
+        <p class="payment-type">One-time payment</p>
+        <ul class="features">
+          <li><i class="fas fa-check"></i> Website Design</li>
+          <li><i class="fas fa-check"></i> Responsive Layout</li>
+          <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+          <li><i class="fas fa-check"></i> 1 Month Support</li>
+        </ul>
+        <a href="contact.html" class="choose-btn">Choose Basic</a>
+      </div>
+
+      <div class="package professional">
+        <div class="popular-tag">Popular</div>
+        <div class="package-icon">
+          <i class="fas fa-crown"></i>
+        </div>
+        <h2>Professional Package</h2>
+        <div class="price">UGX 300k</div>
+        <p class="payment-type">One-time payment</p>
+        <ul class="features">
+          <li><i class="fas fa-check"></i> Full Website Development</li>
+          <li><i class="fas fa-check"></i> Mobile App Design</li>
+          <li><i class="fas fa-check"></i> Advanced SEO</li>
+          <li><i class="fas fa-check"></i> 3 Months Support</li>
+          <li><i class="fas fa-check"></i> Logo Design</li>
+        </ul>
+        <a href="contact.html" class="choose-btn">Choose Professional</a>
+      </div>
+
+      <div class="package enterprise">
+        <div class="package-icon">
+          <i class="fas fa-gem"></i>
+        </div>
+        <h2>Enterprise Package</h2>
+        <div class="price">UGX 500k</div>
+        <p class="payment-type">One-time payment</p>
+        <ul class="features">
+          <li><i class="fas fa-check"></i> Complete Digital Solution</li>
+          <li><i class="fas fa-check"></i> E-commerce Integration</li>
+          <li><i class="fas fa-check"></i> Custom Features</li>
+          <li><i class="fas fa-check"></i> 6 Months Support</li>
+          <li><i class="fas fa-check"></i> Brand Identity Package</li>
+        </ul>
+        <a href="contact.html" class="choose-btn">Choose Enterprise</a>
+      </div>
+    </section>
+
+    <section class="custom-solution">
+      <h2>Need a Custom Solution?</h2>
+      <p>Every project is unique. Let's discuss your specific requirements and create a custom package that fits your needs and budget.</p>
+      <div class="contact-options">
+        <a href="tel:+256708419371" class="contact-btn">
+          <i class="fas fa-phone"></i> Call: +256 708 419 371
+        </a>
+        <a href="mailto:katoj589@gmail.com" class="contact-btn">
+          <i class="fas fa-envelope"></i> Email: katoj589@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>FIND WITH ME</p>
+      <div class="social-icons">
+        <a href="https://ug.linkedin.com/in/kato-joseph-671455221"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/jbz.kalla.98?igsh=MXAyczc0d3lpdDZ1aQ=="><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/jbz.kalla.98"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/KatoJos30650741"><i class="fab fa-twitter"></i></a>
+          <a href="https://youtube.com/@katojoseph3751?si=NgBgLHLKMgLMRVcy"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="copyright">© 2025 Kato Joseph Bwanika. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".toggle-theme");
+  const icon = toggleBtn.querySelector("i");
+  const body = document.body;
+
+  // Default theme
+  body.classList.add("dark-theme");
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("light-theme");
+    body.classList.toggle("dark-theme");
+
+    // Change icon for clarity (moon for dark, sun for light)
+    if (body.classList.contains("light-theme")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+    }
+  });
+});
+</script>
+
+</body>
+</html>

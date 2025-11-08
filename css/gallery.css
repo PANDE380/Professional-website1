@@ -1,0 +1,240 @@
+/* Gallery Page Specific Styles */
+
+/* Gallery Hero Section */
+.gallery-hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+
+.gallery-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-hero span {
+  color: var(--color-primary);
+}
+
+.gallery-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Gallery Filter */
+.gallery-filter {
+  margin-bottom: 2rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: transparent;
+  border: 1px solid var(--color-text-secondary);
+  color: var(--color-text);
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.filter-btn:hover, 
+.filter-btn.active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  transition: transform var(--transition-speed);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.category-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  transform: translateY(100%);
+  transition: transform var(--transition-speed);
+}
+
+.gallery-item:hover .item-overlay {
+  transform: translateY(0);
+}
+
+.item-overlay h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.item-overlay p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 3rem 0;
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--color-text);
+  transition: all var(--transition-speed);
+}
+
+.page-link:hover,
+.page-link.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.page-dots {
+  color: var(--color-text-secondary);
+  margin: 0 0.5rem;
+}
+
+.page-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  transition: background-color var(--transition-speed);
+}
+
+.page-next:hover {
+  background-color: var(--color-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 0 1.5rem;
+  }
+  
+  .filter-buttons {
+    gap: 0.75rem;
+  }
+  
+  .filter-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .gallery-hero p {
+    font-size: 1rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-buttons {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Default dark theme */
+body.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Light theme */
+body.light-theme {
+  background-color: #70777d;
+  color: #000;
+}
+
+/* Optional — make transition smooth */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Kato Joseph Bwanika</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon.ico">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      position: relative;
+    }
+    .logo a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+    }
+    .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #444;
+      z-index: 1000;
+    }
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .navbar ul li {
+      text-align: center;
+    }
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 15px;
+      display: block;
+    }
+    .navbar ul li a:hover {
+      background: #555;
+    }
+    .toggle {
+      display: none;
+    }
+    .toggle-label {
+      cursor: pointer;
+      font-size: 24px;
+      color: #fff;
+    }
+    .toggle:checked + .navbar {
+      display: flex;
+    }
+    .toggle:checked + .navbar + .overlay {
+      display: block;
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+    @media (min-width: 768px) {
+      .navbar {
+        display: flex;
+        position: static;
+        flex-direction: row;
+      }
+      .toggle {
+        display: none;
+      }
+      .toggle-label {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">KJB</a>
+    </div>
+    <input type="checkbox" class="toggle" id="toggle">
+    <label for="toggle" class="toggle-label">☰</label>
+    <nav class="navbar">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <label for="toggle" class="toggle-label" style="font-size: 24px;">✕</label>
+    </nav>
+    <div class="overlay" onclick="document.getElementById('toggle').checked = false;"></div>
+  </header>
+
+  <main>
+    <section>
+      <h1>Resume</h1>
+      <p>Details about Kato Joseph Bwanika's professional experience, skills, and education will go here.</p>
+      <a href="./public/cv.docx" class="btn download-cv">
+        <i class="fas fa-download"></i> Download CV
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Kato Joseph Bwanika. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

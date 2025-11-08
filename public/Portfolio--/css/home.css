@@ -1,0 +1,131 @@
+/* CSS for home page specific styles, including layout, typography, and responsive design elements */
+
+/* General styles for the body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Logo styles */
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+/* Navbar styles */
+.navbar {
+    position: relative;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Navigation menu styles */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Call to action button styles */
+.cta {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        display: none; /* Hide menu by default */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .toggle-theme {
+        margin-left: 10px;
+    }
+}
+
+/* Checkbox for controlling the menu */
+input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+}
+
+/* Styles for the menu when the checkbox is checked */
+input[type="checkbox"]:checked ~ .nav-menu {
+    display: flex; /* Show menu */
+}
+
+/* Close button styles */
+.close-menu {
+    display: none; /* Hide close button by default */
+}
+
+/* Show close button when menu is active */
+input[type="checkbox"]:checked ~ .close-menu {
+    display: block; /* Show close button */
+}
+
+/* Overlay styles to close menu when clicking outside */
+.overlay {
+    display: none; /* Hide overlay by default */
+}
+
+input[type="checkbox"]:checked ~ .overlay {
+    display: block; /* Show overlay when menu is active */
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}

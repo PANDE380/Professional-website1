@@ -1,0 +1,249 @@
+/* Hire Page Specific Styles */
+
+/* Hire Hero Section */
+.hire-hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+
+.hire-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hire-hero span {
+  color: var(--color-primary);
+}
+
+.hire-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Pricing Packages */
+.pricing-packages {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.package {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  position: relative;
+  transition: transform var(--transition-speed);
+}
+
+.package:hover {
+  transform: translateY(-10px);
+}
+
+.package.professional {
+  border: 2px solid var(--color-primary);
+}
+
+.popular-tag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.package-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(230, 57, 70, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.package-icon i {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.package h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.price {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.payment-type {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.features {
+  margin-bottom: 2rem;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.features li i {
+  color: var(--color-primary);
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.choose-btn {
+  display: block;
+  text-align: center;
+  padding: 0.8rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  color: var(--color-text);
+  transition: all var(--transition-speed);
+}
+
+.choose-btn:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.package.professional .choose-btn {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.package.professional .choose-btn:hover {
+  background-color: #d02d3a;
+}
+
+/* Custom Solution Section */
+.custom-solution {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--color-secondary);
+  margin-top: 4rem;
+}
+
+.custom-solution h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.custom-solution p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed);
+}
+
+.contact-btn:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .pricing-packages {
+    gap: 1.5rem;
+  }
+  
+  .package {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hire-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .package {
+    min-width: 280px;
+  }
+  
+  .contact-options {
+    flex-direction: column;
+  }
+  
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hire-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hire-hero p {
+    font-size: 1rem;
+  }
+  
+  .package {
+    min-width: 100%;
+  }
+  
+  .custom-solution {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Default dark theme */
+body.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Light theme */
+body.light-theme {
+  background-color: #70777d;
+  color: #000;
+}
+
+/* Optional — make transition smooth */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+

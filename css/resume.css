@@ -1,0 +1,474 @@
+/* Resume Page Specific Styles */
+
+/* Resume Hero Section */
+.resume-hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+
+.resume-hero .subtitle {
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.resume-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.resume-hero .description {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Resume Tabs */
+.resume-tabs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.tab-navigation input[type="radio"] {
+  display: none;
+}
+
+.tab-navigation label {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  position: relative;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-speed);
+  margin: 0 0.5rem;
+}
+
+.tab-navigation label:hover {
+  color: var(--color-text);
+}
+
+.tab-navigation input[type="radio"]:checked + label {
+  color: var(--color-primary);
+}
+
+.tab-navigation input[type="radio"]:checked + label:after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+/* Tab Content */
+.tab-content {
+  position: relative;
+}
+
+.tab-pane {
+  opacity: 1;
+  transition: opacity var(--transition-speed);
+}
+
+#tab1:not(:checked) ~ .tab-content #education-tab,
+#tab2:not(:checked) ~ .tab-content #skills-tab,
+#tab3:not(:checked) ~ .tab-content #experience-tab,
+#tab4:not(:checked) ~ .tab-content #community-tab {
+  display: none;
+}
+
+.tab-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.tab-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.second-title {
+  margin-top: 4rem;
+}
+
+.tab-description {
+  max-width: 700px;
+  margin-bottom: 3rem;
+  color: var(--color-text-secondary);
+}
+
+/* Education Timeline */
+.education-timeline {
+  position: relative;
+  margin-left: 2rem;
+  padding-left: 2rem;
+}
+
+.education-timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--color-accent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  border: 3px solid var(--color-background);
+}
+
+.timeline-date {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.timeline-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content .status {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.timeline-content .status:empty {
+  display: none;
+}
+
+.timeline-content .status:contains("In Progress") {
+  background-color: rgba(25, 118, 210, 0.1);
+  color: #42a5f5;
+}
+
+.timeline-content .status:contains("Completed") {
+  background-color: rgba(46, 125, 50, 0.1);
+  color: #66bb6a;
+}
+
+.timeline-content .status:contains("Excellent") {
+  background-color: rgba(245, 124, 0, 0.1);
+  color: #ffa726;
+}
+
+.timeline-content .status:contains("Pass") {
+  background-color: rgba(38, 166, 154, 0.1);
+  color: #26a69a;
+}
+
+/* Certifications */
+.certifications {
+  position: relative;
+  margin-left: 2rem;
+  padding-left: 2rem;
+}
+
+.certifications:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--color-accent);
+}
+
+.certification-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.certification-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.certification-content .date {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.skill-category {
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+}
+
+.skill-category h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: var(--color-text);
+}
+
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-weight: 500;
+}
+
+.skill-percentage {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.skill-bar {
+  height: 6px;
+  background-color: var(--color-accent);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: 3px;
+}
+
+.skill-description {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
+/* Tools List */
+.tools-list {
+  list-style: none;
+}
+
+.tools-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tools-list li i {
+  color: var(--color-primary);
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* Experience Timeline */
+.experience-timeline {
+  position: relative;
+  margin-left: 2rem;
+  padding-left: 2rem;
+}
+
+.experience-timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--color-accent);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  transition: transform var(--transition-speed);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  margin-bottom: 0.5rem;
+}
+
+.project-card strong {
+  color: var(--color-text);
+}
+
+/* Community Activities */
+.community-activities {
+  margin-bottom: 2rem;
+}
+
+.activity-item {
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.activity-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.activity-item .date {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* Download CV Button */
+.download-cv {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.download-cv i {
+  font-size: 1.2rem;
+}
+
+.download-cv:hover {
+  background-color: #d02d3a;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .tab-navigation {
+    flex-wrap: wrap;
+  }
+  
+  .tab-navigation label {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tab-title {
+    font-size: 1.8rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .resume-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .resume-hero .description {
+    font-size: 1rem;
+  }
+  
+  .tab-navigation label {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .education-timeline,
+  .certifications {
+    margin-left: 1rem;
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-dot {
+    left: -2rem;
+  }
+  
+  .skill-category {
+    padding: 1.5rem;
+  }
+}
+
+/* Default dark theme */
+body.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Light theme */
+body.light-theme {
+  background-color: #70777d;
+  color: #000;
+}
+
+/* Optional — make transition smooth */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+

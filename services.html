@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Kato Joseph Bwanika</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">KJB</a>
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-icon">&#9776;</label>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cta">
+    <a href="./hire.html" class="hire-btn">Hire Me</a>
+      <button class="toggle-theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="services-hero">
+      <h1>My <span>Services</span></h1>
+      <p>I offer a comprehensive range of services to help bring your ideas to life. From cutting-edge AI solutions to robust web development, I'm here to deliver exceptional results.</p>
+    </section>
+
+    <section class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3>Robotics Development</h3>
+        <p>Design and development of robotic systems, automation solutions, and IoT devices for various industrial and commercial applications.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3>Software Development</h3>
+        <p>Custom software solutions, desktop applications, and system integrations tailored to meet your specific business requirements.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <h3>Website Development</h3>
+        <p>Modern, responsive websites with clean code, SEO optimization, and user-friendly interfaces that drive results.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>Artificial Intelligence Solutions</h3>
+        <p>AI-powered applications, machine learning models, and intelligent automation systems to transform your business processes.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3>Database Management</h3>
+        <p>Database design, optimization, migration, and maintenance services ensuring data integrity and optimal performance.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Innovation Consulting</h3>
+        <p>Strategic technology consulting to help businesses adopt emerging technologies and innovative solutions for competitive advantage.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+        <h3>Technical Training</h3>
+        <p>Customized training programs in programming, web development, AI, and emerging technologies for individuals and teams.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-palette"></i>
+        </div>
+        <h3>Graphics Designing</h3>
+        <p>Creative, visual solutions including logos, branding materials, and digital graphics for marketing and promotional needs.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>Mobile Application</h3>
+        <p>Native and cross-platform mobile applications with intuitive user interfaces and robust backend integrations.</p>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <p>Ready to start your project? Let's discuss how I can help you achieve your goals.</p>
+      <a href="contact.html" class="btn get-started">Get Started</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>FIND WITH ME</p>
+      <div class="social-icons">
+        <a href="https://ug.linkedin.com/in/kato-joseph-671455221"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/jbz.kalla.98?igsh=MXAyczc0d3lpdDZ1aQ=="><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/jbz.kalla.98"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/KatoJos30650741"><i class="fab fa-twitter"></i></a>
+          <a href="https://youtube.com/@katojoseph3751?si=NgBgLHLKMgLMRVcy"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="copyright">© 2025 Kato Joseph Bwanika. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".toggle-theme");
+  const icon = toggleBtn.querySelector("i");
+  const body = document.body;
+
+  // Default theme
+  body.classList.add("dark-theme");
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("light-theme");
+    body.classList.toggle("dark-theme");
+
+    // Change icon for clarity (moon for dark, sun for light)
+    if (body.classList.contains("light-theme")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+    }
+  });
+});
+</script>
+
+</body>
+</html>

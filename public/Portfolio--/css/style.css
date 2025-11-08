@@ -1,0 +1,145 @@
+/* General styles for the entire portfolio */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.navbar {
+    position: relative;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background: #555;
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+}
+
+.hire-btn {
+    background: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.toggle-theme {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        padding: 15px;
+        display: block;
+    }
+
+    .close-menu {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+}
+
+/* Checkbox for toggling the menu */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .nav-menu {
+    display: flex;
+}
+
+input[type="checkbox"]:checked ~ .hamburger .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+input[type="checkbox"]:checked ~ .hamburger .bar2 {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .hamburger .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
